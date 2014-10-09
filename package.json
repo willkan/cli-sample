@@ -1,0 +1,21 @@
+{
+  "name": "cli-sample",
+  "version": "0.0.1",
+  "description": "write a simple cli",
+  "main": "index.js",
+  "bin": {
+    "cli": "./cli.js"
+  },
+  "keywords": [
+    "cli"
+  ],
+  "author": "willkan",
+  "license": "ISC",
+  "dependencies": {
+    "commander": "*",
+    "cheerio": "*",
+    "request": "*",
+    "inquirer": "*",
+    "colors": "*"
+  }
+}
