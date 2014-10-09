@@ -16,7 +16,7 @@ function smaller (v1, v2) {
 };
 
 function getOnlineVersion (cb) {
-  request('http://web.npm.alibaba-inc.com/package/@ali/hydrasdk', function (err, res) {
+  request('http://cnpmjs.org/package/cli-sample', function (err, res) {
     if (err) {
       return cb(err);
     }
@@ -40,7 +40,7 @@ module.exports = function(cb) {
     needUpdate = smaller(localVersion, onlineVersion);
     if (needUpdate) {
       warnMessage = "cli的最新版是" + onlineVersion + ", 当前版本是" + localVersion + ", 建议更新到最新版. 更新命令:";
-      cmd = 'cnpm install -g @ali/hydrasdk@latest';
+      cmd = 'npm install -g cli-sample';
       console.warn(warnMessage.yellow, cmd.green);
     }
     return cb();
